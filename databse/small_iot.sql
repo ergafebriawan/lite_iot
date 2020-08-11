@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 11 Agu 2020 pada 19.58
+-- Generation Time: 11 Agu 2020 pada 21.09
 -- Versi Server: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -58,6 +58,25 @@ CREATE TABLE `output` (
 INSERT INTO `output` (`id`, `name`, `state`) VALUES
 (1, 'control1', 0);
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `user`
+--
+
+CREATE TABLE `user` (
+  `user_id` varchar(50) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `user`
+--
+
+INSERT INTO `user` (`user_id`, `password`) VALUES
+('agre', '12345'),
+('mustafi', 'admin');
+
 --
 -- Indexes for dumped tables
 --
@@ -73,6 +92,12 @@ ALTER TABLE `input`
 --
 ALTER TABLE `output`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`user_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
